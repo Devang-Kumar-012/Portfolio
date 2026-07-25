@@ -4,7 +4,7 @@ import "../globals.css";
 import SmoothScroll from "@/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { LanguageProvider } from "@/providers/language-provider";
-import { PreLoader } from "@/components/layout/preLoader";
+import { PreLoader } from "@/components/layout/preloader";
 import { CustomCursor } from "@/components/Layout/custom-cursor";
 import Navbar from "@/components/layout/navbar";
 import { isValidLocale } from "@/lib/i18n";
@@ -25,7 +25,7 @@ export function generateStaticParams() {
 
 export default async function LangLayout({
     children,
-    params,
+    params,  
 }: {
     children: React.ReactNode;
     params: Promise<{ lang: string }>;
@@ -49,18 +49,19 @@ export default async function LangLayout({
             >
                 <LanguageProvider
                     lang={lang}
-                    dictionary={dictionary}
+                    dict={dictionary}
                     contents={contents}
+                    shared={shared}
                 >
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="dark"
                         enableSystem={false}
                     >
-                        <CustomCursor />
+                        {/* <CustomCursor /> */}
                         <PreLoader />
                         <SmoothScroll>
-                            <Navbar />
+                            {/* <Navbar /> */}
                             {children}
                         </SmoothScroll>
                     </ThemeProvider>
