@@ -63,18 +63,18 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                     </div>
                     <div className="flex flex-wrap gap-3 items-center mt-6">
                         {content.social.map((link: { label: string; href: string }) => (
-                        <div key={link.label}>
-                            <ShineButton
-                                href={link.href}
-                                className="h-10 px-5"
-                                shineClassName="w-4 bg-background/20 dark:bg-background/20"
-                            >
-                                <span className="relative z-10 flex items-center gap-2 text-xs tracking-widest uppercase font-medium">
-                                    {link.label}
-                                    <ArrowUpRight className="w-3 h-3 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                                </span>
-                            </ShineButton>
-                        </div>
+                            <div key={link.label}>
+                                <ShineButton
+                                    href={link.href}
+                                    className="h-10 px-5"
+                                    shineClassName="w-4 bg-background/20 dark:bg-background/20"
+                                >
+                                    <span className="relative z-10 flex items-center gap-2 text-xs tracking-widest uppercase font-medium">
+                                        {link.label}
+                                        <ArrowUpRight className="w-3 h-3 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                    </span>
+                                </ShineButton>
+                            </div>
                         ))}
                     </div>
                 </div>
