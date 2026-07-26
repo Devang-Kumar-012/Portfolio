@@ -72,7 +72,7 @@ export default function Hero() {
                     >
                         {COL_1_IMAGES.map((src, idx) => (
                             <div
-                                key={idx}
+                                key={`col1-${idx}`}
                                 className="w-full aspect-[3/4] relative overflow-hidden rounded-4xl border border-white/5"
                             >
                                 <Image
@@ -99,7 +99,7 @@ export default function Hero() {
                     >
                         {COL_2_IMAGES.map((src, idx) => (
                             <div
-                                key={idx}
+                                key={`col2-${idx}`}
                                 className="w-full aspect-[3/4] relative overflow-hidden rounded-4xl border border-white/5"
                             >
                                 <Image
@@ -154,8 +154,11 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <div className="space-y-6 sm:space-y-8 xx1:space-y-10">
-                        <p className="sm:text-lg 2xl:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mix-blend-difference"></p>
+                    <div className="space-y-6 sm:space-y-8 xl:space-y-10">
+                        <p className="sm:text-lg 2xl:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mix-blend-difference">
+                            {content.about.description}
+                        </p>
+                        <div className="flex flex-col sem:flex-row flex-wrap sm:items-center gap-4"></div>
                     </div>
 
                 </motion.div>
