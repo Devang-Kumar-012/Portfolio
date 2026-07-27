@@ -5,7 +5,7 @@ import SmoothScroll from "@/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { LanguageProvider } from "@/providers/language-provider";
 import { PreLoader } from "@/components/layout/preloader";
-import { CustomCursor } from "@/components/Layout/custom-cursor";
+import { CustomCursor } from "@/components/layout/custom-cursor";
 import Navbar from "@/components/layout/navbar";
 import { isValidLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";

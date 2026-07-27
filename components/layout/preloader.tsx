@@ -82,16 +82,15 @@ export function PreLoader() {
                                     className="text-primary"
                                 />
                             </motion.svg>
-                            <div className="absolute inset-3 flex items-center justify-center rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Logo"
-                                    width={56}
-                                    height={56}
-                                    className="object-contain z-10"
-                                    priority
-                                />
-                            </div>
+                            <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md"></div>
+                            <Image
+                                src="/logo.png"
+                                alt=""
+                                width={56}
+                                height={56}
+                                className="object-contain z-10"
+                                priority
+                            />
                         </div>
                     </motion.div>
                 </motion.div>

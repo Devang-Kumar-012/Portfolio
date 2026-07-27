@@ -5,7 +5,7 @@ import { Underline } from "lucide-react";
 
 interface ShineButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string;
-    ClassName?: string;
+    className?: string;
     children: React.ReactNode;
     shineClassName?: string;
 }
@@ -25,7 +25,7 @@ export function ShineButton({
             target={target}
             rel={target === "_blank" ? rel : undefined}
             className={cn(
-                "group relative flex items-center justify-center overflow-hidden rounded-full border border/50 bg-background text-foreground transition-all duration-500 hover:text:text-background hover:border-foreground/30 shadow-sm",
+                "group relative flex items-center justify-center overflow-hidden rounded-full border border/50 bg-background text-foreground transition-all duration-500 hover:text-background hover:border-foreground/30 shadow-sm",
                 className
             )}
             {...props}

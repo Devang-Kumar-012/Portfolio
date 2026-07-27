@@ -58,7 +58,33 @@ export default function Hero() {
 
             <motion.div
                 style={{ opacity }}
-                className="absolute top-0 right-6 sm:right-12 md:right-10 lg:right-24 xl:right-36 2xl:right-48 bottom-0 h-full w-55 sm:w-65 md:w-85 lg:w-100 xl:w-110 2xl:w-120 flex gap-3 sm:gap-4 px-2 overflow-hidden z-5 pointer-events-none select-none opacity-[0.22] dark:opacity-[0.28] mix-blend-luminosity"
+                className="absolute 
+                top-0 
+                right-6 
+                sm:right-12 
+                md:right-10 
+                lg:right-24 
+                xl:right-36 
+                2xl:right-48 
+                bottom-0 
+                h-full 
+                w-55 
+                sm:w-65 
+                md:w-85 
+                lg:w-100 
+                xl:w-110 
+                2xl:w-120 
+                flex 
+                gap-3 
+                sm:gap-4 
+                px-2 
+                overflow-hidden 
+                z-5 
+                pointer-events-none 
+                select-none 
+                opacity-[0.22] 
+                dark:opacity-[0.28] 
+                mix-blend-luminosity"
             >
                 <div className="max-hd:hidden flex-1 h-full overflow-hidden relative">
                     <motion.div

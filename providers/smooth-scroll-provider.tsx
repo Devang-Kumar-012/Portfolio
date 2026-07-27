@@ -13,6 +13,7 @@ export default function SmoothScroll({
     children: React.ReactNode;
 }) {
     const [lenis, setLenis] = useState<Lenis | null>(null);
+
     useEffect(() => {
         const lenisInstance = new Lenis({
             duration: 1.2,
@@ -24,6 +25,7 @@ export default function SmoothScroll({
         const frameId = requestAnimationFrame(() => {
             setLenis(lenisInstance)
         });
+
         let rafId: number;
 
         function raf(time: number) {

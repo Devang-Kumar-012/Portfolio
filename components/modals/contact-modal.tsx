@@ -25,7 +25,7 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent
                 showCloseButton={true}
-                className="flex flex-col sm:max-w-[560px max-h-[85vh] p-0 gap-0 border-border/50 bg-background/95 backdrop-blur-xl overflow-hidden">
+                className="flex flex-col sm:max-w-[560px] max-h-[85vh] p-0 gap-0 border-border/50 bg-background/95 backdrop-blur-xl overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent z-10"></div>
                 <div className="relative px-8 pt-8 pb-4 shrink-0">
                     <DialogHeader className="gap-3">
@@ -39,10 +39,11 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                 </div>
                 <div className="overflow-y-auto px-8 pb-8 pt-2 flex-1" data-lenis-prevent="true">
                     <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-2">
-                        <a href={`mailto:${content.contact.email}`}
-                            className="group flex items-center gap-4 px-5 py-2.5 rounded-full border border/50 bg-secondary/20 backdrop-blur-sm hover:bg-foreground hover:border-foreground/30 transition-all duration-500 ease-out"
+                        <a
+                            href={`mailto:${content.contact.email}`}
+                            className="group flex items-center gap-4 px-5 py-2.5 rounded-full border border/50 bg-secondary/20 backdrop-blur-sm hover:bgforeground hover:border-foreground/30 transition-all duration-500 ease-out"
                         >
-                            <div className="w-8 h-8 rounded-full border border-border/50 bg-background flex items-center justify-center shrink-0 group-hover-scale-110 group-hover:bg-background transition-transform duration-500">
+                            <div className="w-8 h-8 rounded-full border border-border/50 bg-background flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-background transition-transform duration-500">
                                 <Mail className="w-3.5 h-3.5 text-foreground" />
                             </div>
                             <span className="text-foreground tracking-wide font-medium text-sm group-hover:text-background transition-colors duration-500">

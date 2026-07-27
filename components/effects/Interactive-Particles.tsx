@@ -96,18 +96,17 @@ export function InteractiveParticles() {
         let animationFrameId = 0;
         let isVisible = false;
         let particles: Particle[] = [];
-
         let cachedRect = canvas.getBoundingClientRect();
         let cachedDpr = window.devicePixelRatio || 1;
-        let cachedIsDark = document.documentElement.classList.contains("dark");
+        let cachedIsDark = document.documentElement.classList.contains('dark');
 
         const themeObserver = new MutationObserver(() => {
-            cachedIsDark = document.documentElement.classList.contains("dark");
+            cachedIsDark = document.documentElement.classList.contains('dark');
         });
 
         themeObserver.observe(document.documentElement, {
             attributes: true,
-            attributeFilter: ["class"],
+            attributeFilter: ['class'],
         });
 
         const initParticles = (
