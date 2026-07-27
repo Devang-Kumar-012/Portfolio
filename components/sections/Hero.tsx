@@ -99,15 +99,25 @@ export default function Hero() {
                         {COL_1_IMAGES.map((src, idx) => (
                             <div
                                 key={`col1-${idx}`}
-                                className="w-full aspect-[3/4] relative overflow-hidden rounded-4xl border border-white/5"
+                                className="w-full 
+                                aspect-3/4 
+                                relative 
+                                overflow-hidden 
+                                rounded-4xl 
+                                border 
+                                border-white/5"
                             >
                                 <Image
                                     src={src}
                                     alt=""
                                     fill
                                     priority
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 20vw, 12vw"
-                                    className="object-cover object-center grayscale contrast-[1.08] brightness-[0.8]"
+                                    sizes="(max-width: 768px) 0px, (max-width: 1280px) 20vw, 12vw"
+                                    className="object-cover 
+                                    object-center 
+                                    grayscale 
+                                    contrast-[1.08] 
+                                    brightness-[0.8]"
                                 />
                             </div>
                         ))}
@@ -126,7 +136,13 @@ export default function Hero() {
                         {COL_2_IMAGES.map((src, idx) => (
                             <div
                                 key={`col2-${idx}`}
-                                className="w-full aspect-[3/4] relative overflow-hidden rounded-4xl border border-white/5"
+                                className="w-full 
+                                aspect-[3/4] 
+                                relative 
+                                overflow-hidden 
+                                rounded-4xl 
+                                border 
+                                border-white/5"
                             >
                                 <Image
                                     src={src}
