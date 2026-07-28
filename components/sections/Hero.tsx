@@ -111,8 +111,8 @@ export default function Hero() {
                                     src={src}
                                     alt=""
                                     fill
-                                    priority
                                     sizes="(max-width: 768px) 0px, (max-width: 1280px) 20vw, 12vw"
+                                    priority
                                     className="object-cover 
                                     object-center 
                                     grayscale 
@@ -148,28 +148,79 @@ export default function Hero() {
                                     src={src}
                                     alt=""
                                     fill
-                                    priority
                                     sizes="(max-width: 640px) 45vw, (max-width: 1280px) 20vw, 12vw"
-                                    className="object-cover object-center grayscale contrast-[1.08] brightness-[0.8]"
+                                    priority
+                                    className="object-cover 
+                                    object-center 
+                                    grayscale 
+                                    contrast-[1.08] 
+                                    brightness-[0.8]"
                                 />
                             </div>
                         ))}
                     </motion.div>
                 </div>
-                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-background pointer-events-none z-10"></div>
-                <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background pointer-events-none z-10"></div>
+                <div className="absolute 
+                inset-0 
+                bg-linear-to-t 
+                from-background 
+                via-transparent 
+                to-background 
+                pointer-events-none 
+                z-10"></div>
+                <div className="absolute 
+                inset-0 
+                bg-linear-to-r 
+                from-background 
+                via-transparent 
+                to-background 
+                pointer-events-none 
+                z-10"></div
+                >
                 <motion.div
                     style={{ opacity, scale, y, filter }}
-                    className="relative z-20 flex-1 flex flex-col gap-6 sm:gap-8 xl:gap-12 justify-end w-full h-full will-change-[opacity,transform,filter]"
+                    className="relative 
+                    z-20 
+                    flex-1 
+                    flex 
+                    flex-col 
+                    gap-6 
+                    sm:gap-8 
+                    xl:gap-12 
+                    justify-end 
+                    w-full 
+                    h-full 
+                    will-change-[opacity,transform,filter]"
                 >
-                    <div className="flex justify-between items-start w-full">
-                        <div className="text-4xl sm:text-foreground/10 grunge-text rotate-90 pointer-events-none select-none">
+                    <div className="flex 
+                    justify-between 
+                    items-start 
+                    w-full">
+                        <div className="text-4xl 
+                        sm:text-6xl 
+                        text-foreground/10 
+                        grunge-text
+                        rotate-90 
+                        pointer-events-none 
+                        select-none">
                             {"////"}
                         </div>
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="w-px h-12 bg-border relative overflow-hidden">
+                        <div className="flex 
+                        flex-col 
+                        items-center 
+                        gap-4">
+                            <div className="w-px 
+                            h-12 
+                            bg-border 
+                            relative 
+                            overflow-hidden">
                                 <motion.div
-                                    className="absolute top-0 left-0 w-full h-1/2 bg-foreground"
+                                    className="absolute 
+                                    top-0 
+                                    left-0 
+                                    w-full 
+                                    h-1/2 
+                                    bg-foreground"
                                     animate={{
                                         y: ["0%", "100%", "0%"],
                                     }}
