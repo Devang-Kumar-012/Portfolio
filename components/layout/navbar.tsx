@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useMemo, useCallback, use } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
 // import LanguageSwitcher from "@/components/widgets/language-switcher";
 // import ThemeSwitcher from "@/components/widgets/theme-switcher";
@@ -12,7 +12,7 @@ import Lenis from "lenis";
 
 export default function Navbar() {
     const { dict } = useLanguage();
-    const lenis = useLanguage();
+    const lenis = useLenis(); // Fixed: switched from useLanguage to useLenis
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const [dimensions, setDimensions] = useState({
@@ -77,7 +77,7 @@ export default function Navbar() {
         };
     }, [isMobileMenuOpen, lenis]);
 
-    const scrollToSection = useCallbacK((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
         const targetId = href.replace("#", "");
         const elem = document.getElementById(targetId);
@@ -89,11 +89,7 @@ export default function Navbar() {
                 let navbarHeight = 80;
                 if (headerRef.current) {
                     const currentHeight = headerRef.current.offsetHeight;
-                    const currentScroll = window.scrollY;
-                    const currentPy = currentScroll >= dimensions.scrollHeight
-                        ? 12
-                        : 24 - (currentScroll / dimensions.scrollHeight) * 12;
-                    const heightDifference = (currentHeight - heightDifference, 0);
+                    navbarHeight = Math.max(currentHeight, 0);
                 }
 
                 const isDesktop = dimensions.screenWidth >= 1280;
@@ -103,7 +99,7 @@ export default function Navbar() {
                     lenis.scrollTo(targetId === "home" ? 0 : elem!, {
                         offset: targetId === "home" ? 0 : isAboutOnDesktop ? 0 : -navbarHeight,
                         duration: 1.5,
-                    }):
+                    });
                 } else {
                     if (targetId === "home") {
                         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -127,10 +123,34 @@ export default function Navbar() {
                 paddingTop: py,
                 paddingBottom: py,
             }}
-            className="fixed top-0 left-0 right-0 z-100 transition-colors duration-300"
+            className="fixed top-0 left-0 right-0 z-[100] transition-colors duration-300"
         >
+            <div ref={dummyRef} className="container invisible absolute pointer-events-none -z-50"></div>
+            <motion.div
+                style={{
+                    opacity: bgOpacity,
+                    backdropFilter,
+                    WebkitBackdropFilter: backdropFilter,
+                }}
+                className="absolute inset-0 bg-background/75 border-b border-border/40 -z-10 pointer-events-none"
+            ></motion.div>
 
+            <motion.nav
+                style={{
+                    maxWidth: navMaxWidth,
+                }}
+                className="mx-auto px-container flex items-center justify-between w-full"
+            >
+                <Link
+                    href="#home"
+                    onClick={(e) => scrollToSection(e, "#home")}
+                    className="relative z-110 flex items-center gap-2 group"
+                >
+                    <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
+                        devang
+                    </span>
+                </Link>
+            </motion.nav>
         </motion.header>
-    )
-
+    );
 }
