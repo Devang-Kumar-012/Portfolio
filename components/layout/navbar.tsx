@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 // import ThemeSwitcher from "@/components/widgets/theme-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
+import Lenis from "lenis";
 
 export default function Navbar() {
     const { dict } = useLanguage();
@@ -78,6 +79,58 @@ export default function Navbar() {
 
     const scrollToSection = useCallbacK((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
-    })
+        const targetId = href.replace("#", "");
+        const elem = document.getElementById(targetId);
+
+        if (elem || targetId === "home") {
+            setIsMobileMenuOpen(false);
+
+            setTimeout(() => {
+                let navbarHeight = 80;
+                if (headerRef.current) {
+                    const currentHeight = headerRef.current.offsetHeight;
+                    const currentScroll = window.scrollY;
+                    const currentPy = currentScroll >= dimensions.scrollHeight
+                        ? 12
+                        : 24 - (currentScroll / dimensions.scrollHeight) * 12;
+                    const heightDifference = (currentHeight - heightDifference, 0);
+                }
+
+                const isDesktop = dimensions.screenWidth >= 1280;
+                const isAboutOnDesktop = targetId === "about" && isDesktop;
+
+                if (lenis) {
+                    lenis.scrollTo(targetId === "home" ? 0 : elem!, {
+                        offset: targetId === "home" ? 0 : isAboutOnDesktop ? 0 : -navbarHeight,
+                        duration: 1.5,
+                    }):
+                } else {
+                    if (targetId === "home") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                    } else if (elem) {
+                        const rect = elem.getBoundingClientRect();
+                        const offsetPosition = rect.top + window.scrollY - (isAboutOnDesktop ? 0 : navbarHeight);
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth",
+                        });
+                    }
+                }
+            }, 100);
+        }
+    }, [lenis, dimensions.scrollHeight, dimensions.screenWidth]);
+
+    return (
+        <motion.header
+            ref={headerRef}
+            style={{
+                paddingTop: py,
+                paddingBottom: py,
+            }}
+            className="fixed top-0 left-0 right-0 z-100 transition-colors duration-300"
+        >
+
+        </motion.header>
+    )
 
 }
