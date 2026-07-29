@@ -29,7 +29,10 @@ export function PreLoader() {
                     initial={{ y: 0 }}
                     exit={{
                         y: "-100%",
-                        transition: { duration: 0.09, ease: [0.76, 0, 0.24, 1] }
+                        transition: {
+                            duration: 0.8,
+                            ease: [0.76, 0, 0.24, 1]
+                        }
                     }}
                     className="fixed inset-0 z-99999 flex flex-col items-center bg-background pointer-events-auto">
                     <motion.div
@@ -84,7 +87,7 @@ export function PreLoader() {
                             </motion.svg>
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md"></div>
                             <Image
-                                src="/logo.png"
+                                src="/logo.webp"
                                 alt=""
                                 width={56}
                                 height={56}

@@ -15,7 +15,7 @@ const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-    title: "Kintarowwwards",
+    title: "Devang Portfolio",
     description: "Creative Developer Portfolio",
 };
 
@@ -25,7 +25,7 @@ export function generateStaticParams() {
 
 export default async function LangLayout({
     children,
-    params,  
+    params,
 }: {
     children: React.ReactNode;
     params: Promise<{ lang: string }>;

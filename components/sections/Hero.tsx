@@ -11,16 +11,16 @@ import { InteractiveParticles } from "@/components/effects/Interactive-Particles
 const TRACK_1 = [
     "/hero-slider/makise-kurisu-2.webp",
     "/hero-slider/atam-1.webp",
-    "/hero-slider/kintaro-2.webp",
+    "/hero-slider/Devang-2.webp",
     "/hero-slider/makise-kurisu-1.webp",
     "/hero-slider/atam-2.webp",
-    "/hero-slider/kintaro-1.webp",
+    "/hero-slider/Devang-1.webp",
 ] as const;
 const TRACK_2 = [
-    "/hero-slider/kintaro-1.webp",
+    "/hero-slider/Devang-1.webp",
     "/hero-slider/atam-2.webp",
     "/hero-slider/makise-kurisu-1.webp",
-    "/hero-slider/kintaro-2.webp",
+    "/hero-slider/Devang-2.webp",
     "/hero-slider/atam-1.webp",
     "/hero-slider/makise-kurisu-2.webp",
 ] as const;
@@ -147,7 +147,7 @@ export default function Hero() {
                     <p className="sm:text-lg 2xl:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mix-blend-difference">
                         {content.about.description}
                     </p>
-                    <div className="flex flex-col sem:flex-row flex-wrap sm:items-center gap-4">
+                    <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
                         <button
                             onClick={() => setContactOpen(true)}
                             className="w-fit group relative flex h-12 xl:h-16 cursor-pointer items-center justify-center overflow-hidden rounded-full border-border/50 bg-foreground px-6 xl:px-10 text-background transition-all duration-500 ease-out hover:bg-background hover:border-foreground/30 hover:text-foreground shadow-2xl hover:-translate-y-0.5"
@@ -173,6 +173,8 @@ export default function Hero() {
                     </div>
                 </div>
             </motion.div>
+
+            <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
         </section>
     );
-}
+};

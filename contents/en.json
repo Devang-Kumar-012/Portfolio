@@ -1,113 +1,120 @@
 {
     "about": {
-        "intro": "I'm a *Full Stack Developer* focused on building **clean and sustainable systems**.",
-        "description": "I'm someone who loves **learning new things** and constantly tries to put what I learn into practice. I develop *web* and *desktop* applications. I enjoy working with simple, **practical**, and **sustainable** tools.",
-        "full": "Hi, I'm **Kintaro**; my real name is **Mustafa**. I have been actively involved in software development for the past few years, mostly self-taught through my own projects and experiments.\n\nI mainly work on web development, using technologies like *React*, *Next.js*, *Laravel*, *TailwindCSS*, *PostgreSQL*, and *MySQL*. Along with these, I develop desktop applications with *WinForms*, *C#*, and *Rust*, as well as various projects utilizing tools like *FFmpeg* and *yt-dlp*.\n\nWhenever I see a new technology or tool, I usually start experimenting with it; I love learning, which constantly draws me to different areas.\n\nI pay great attention to making my projects as **clean, understandable, and sustainable** as possible. I'm a bit **obsessive** about this; sometimes I make things harder for myself even when I know it's unnecessary.\n\nMy current goal is to specialize in **backend and system design** and make my projects more professional. In addition to this, I want to build my own systems, libraries, and simple, practical tools."
+        "intro": "I'm a *Full Stack & AI Developer* focused on building **intelligent, scalable, and user-centric applications**.",
+        "description": "I'm passionate about building software that solves real-world problems through modern web technologies, artificial intelligence, and robotics. I enjoy transforming ideas into practical products while continuously learning new technologies and improving my skills. Whether it's developing full-stack web applications, AI-powered platforms, or robotics systems, I strive to create **clean**, **efficient**, and **impactful** solutions.",
+        "full": "Hi, I'm **Devang Kumar**, a B.Tech student specializing in **Artificial Intelligence & Machine Learning** at Hi-Tech Institute of Engineering & Technology, affiliated with AKTU.\n\nMy journey into software development began with curiosity and quickly grew into a passion for solving real-world problems through technology. Over the years, I've explored web development, backend engineering, artificial intelligence, robotics, databases, and modern software architecture by building projects, participating in hackathons, and constantly learning new technologies.\n\nMy primary stack includes *React*, *Next.js*, *Node.js*, *Express.js*, *JavaScript*, *TypeScript*, *Python*, *Java*, *MongoDB*, *MySQL*, and *Tailwind CSS*. Alongside web development, I've also worked extensively with *ROS 2*, *Gazebo*, *RViz*, *URDF*, *Xacro*, Linux, and robotics backend development, gaining practical experience in robotic software systems and simulations.\n\nSome of my most meaningful projects include **Street Dog Health Twin (SDHT)**, an AI-powered platform designed to improve stray dog healthcare, **MoodMate**, an AI-assisted mental wellness application, and a **Cybersecurity Awareness Platform** focused on educating users through modern web technologies. These experiences have strengthened my abilities in software architecture, backend development, teamwork, and product design.\n\nBeyond development, I actively participate in hackathons, enjoy experimenting with emerging technologies, and constantly challenge myself to build better software. My long-term goal is to become a professional **Software Engineer combining Full Stack Development and Artificial Intelligence**, creating intelligent systems that make a meaningful impact."
     },
     "manifesto": [
-        "RADICAL TRANSPARENCY",
-        "INTENTIONAL MINIMALISM",
-        "ARCHITECTURAL INTEGRITY",
-        "FIRST PRINCIPLES THINKING",
-        "PERFORMANCE WITHOUT COMPROMISE",
-        "SCALABLE VISION"
+        "CONTINUOUS LEARNING",
+        "PROBLEM SOLVING",
+        "BUILD WITH PURPOSE",
+        "AI FOR IMPACT",
+        "CLEAN DEVELOPMENT",
+        "NEVER STOP IMPROVING"
     ],
     "projects": [
         {
             "id": "1",
-            "title": "Aether Media",
-            "category": "Media Tool",
+            "title": "Street Dog Health Twin (SDHT)",
+            "category": "AI Healthcare Platform",
             "year": "2026",
-            "description": "Aether Media is a media processing tool that allows users to batch convert, compress, resize, and rename media files (video, audio, image) quickly, securely, and easily.\n\nBuilt on the performance of Rust and the lightweight nature of Tauri. Using the power of FFmpeg in the background, it offers complex media operations with a modern interface. Your files are never uploaded to a server; all processes take place entirely locally on your own device.",
-            "image": "/projects/20260427093247885.jpg",
-            "repo": "https://github.com/xkintaro/aether-media",
+            "description": "Street Dog Health Twin (SDHT) is an AI-powered platform designed to improve the healthcare and welfare of stray dogs through digital health monitoring. The system creates digital profiles for stray dogs, enables volunteers and NGOs to report health conditions, and is designed to integrate RFID collars for intelligent tracking. Developed as an ideathon-winning project, SDHT combines artificial intelligence, full-stack development, and social impact to support animal welfare initiatives.",
+            "image": "/projects/sdht.jpg",
+            "repo": "https://github.com/Devang-Kumar-012",
             "stack": [
-                "FFmpeg",
-                "Rust",
-                "Tauri",
                 "React",
-                "TailwindCSS"
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "AI"
             ]
         },
         {
             "id": "2",
-            "title": "Aether JS",
-            "category": "Library",
+            "title": "MoodMate",
+            "category": "AI Mental Wellness Platform",
             "year": "2026",
-            "description": "Aether JS is a headless, utility-first JavaScript interaction controller designed for modern web development. It enables you to build fully accessible (a11y) UIs—like modals, tabs, and accordions—using only HTML data-aether-* attributes, without writing complex JavaScript. Perfectly suited for TailwindCSS and similar frameworks, it focuses on state management while leaving the styling entirely to you. Features include focus trapping, dynamic DOM observation, URL syncing, and theme management.",
-            "image": "/projects/20260427093247620.jpg",
-            "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
-            "repo": "https://github.com/xkintaro/aether-js",
+            "description": "MoodMate is an AI-assisted mental wellness platform that enables users to track their mood, maintain personal journals, and receive AI-generated insights. The application encourages healthier daily habits through intelligent recommendations while providing a modern, responsive, and user-friendly experience.",
+            "image": "/projects/moodmate.jpg",
+            "repo": "https://github.com/Devang-Kumar-012",
             "stack": [
-                "JavaScript"
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "AI"
             ]
         },
         {
             "id": "3",
-            "title": "File Manager",
+            "title": "Cybersecurity Awareness Platform",
             "category": "Web Application",
-            "year": "2025",
-            "description": "File Manager is a self-hosted file management application with a cyberpunk-inspired interface. It lets you upload, organize, tag, and filter any type of file through a sleek, modern web interface backed by SQLite — no external database required.\n\nAll files are stored locally on your machine — no cloud, no third-party servers. Upload your files, assign tags and keywords, and find them instantly with powerful filtering. The application automatically generates thumbnails for images and videos, giving you a visual overview of your entire archive.",
-            "image": "/projects/20260305210513749.jpg",
-            "repo": "https://github.com/xkintaro/file-manager",
+            "year": "2026",
+            "description": "A modern cybersecurity awareness platform developed to educate users about cyber threats, phishing attacks, password security, and safe online practices. Built using modern frontend technologies with responsive design and interactive user experiences, the project focuses on spreading cybersecurity awareness through engaging content and intuitive design.",
+            "image": "/projects/cybersecurity.jpg",
+            "repo": "https://github.com/Devang-Kumar-012",
             "stack": [
-                "React",
+                "Next.js",
+                "TypeScript",
                 "TailwindCSS",
-                "Node.js",
-                "SQLite"
+                "Framer Motion"
             ]
         }
     ],
     "roadmap": [
         {
             "id": "01",
-            "year": "2022",
-            "description": "I first got introduced to software development in high school. I learned the fundamentals and logic of programming using C# in an object-oriented programming class.",
+            "year": "2023",
+            "description": "Started my B.Tech journey in Artificial Intelligence & Machine Learning while learning programming fundamentals, object-oriented programming, and data structures. During this period, I built a strong foundation in software development and problem-solving.",
             "stack": [
-                "C#"
+                "C",
+                "C++",
+                "Java",
+                "Python"
             ]
         },
         {
             "id": "02",
-            "year": "2023",
-            "description": "I started developing static and dynamic websites by learning HTML, CSS, and ASP.NET. During this period, I also learned how to use databases in my projects.",
+            "year": "2024",
+            "description": "Expanded into modern web development by learning HTML, CSS, JavaScript, React, backend development, and database management. Built multiple academic and personal projects while strengthening frontend and backend development skills.",
             "stack": [
                 "HTML",
                 "CSS",
-                "ASP.NET",
+                "JavaScript",
+                "React",
                 "MySQL"
             ]
         },
         {
             "id": "03",
-            "year": "2024",
-            "description": "It was my last year of high school. I significantly improved my UI development skills with CSS and continued working with ASP.NET at my internship.",
+            "year": "2025",
+            "description": "Worked as a Robotics Backend Engineer Intern at NextUp Robotics while also participating in hackathons and developing AI-powered full-stack applications. During this period, I gained practical experience with robotics software development, Linux, ROS 2, and backend system integration.",
             "stack": [
-                "HTML",
-                "CSS",
-                "ASP.NET",
-                "MySQL"
+                "ROS 2",
+                "Gazebo",
+                "RViz",
+                "Python"
             ]
         },
         {
             "id": "04",
-            "year": "2025",
-            "description": "After high school, I turned to modern technologies like React, Node.js, Tailwind CSS, and MongoDB. During this period, I developed many websites and applications. Additionally, I started writing various tools in Python for my personal use.",
+            "year": "2026",
+            "description": "Built impactful AI projects including Street Dog Health Twin (SDHT) and MoodMate, won college ideathons, developed modern full-stack applications with Next.js, and continued improving software architecture, backend engineering, and AI integration skills.",
             "stack": [
-                "React",
+                "Next.js",
                 "Node.js",
-                "TailwindCSS",
-                "MongoDB"
+                "MongoDB",
+                "AI"
             ]
         },
         {
             "id": "05",
-            "year": "2026",
-            "description": "I started working as an intern at PostAjans, where I focused mainly on Laravel. In addition, I develop web projects using Next.js in my free time and build various personal projects utilizing technologies like Tauri and FFmpeg.",
+            "year": "Future",
+            "description": "My goal is to become a Software Engineer combining Full Stack Development and Artificial Intelligence, building scalable systems, intelligent applications, and impactful technology while continuously learning and contributing to innovative products.",
             "stack": [
-                "Laravel",
-                "Next.js",
-                "PostgreSQL"
+                "System Design",
+                "Cloud",
+                "Artificial Intelligence"
             ]
         }
     ]
