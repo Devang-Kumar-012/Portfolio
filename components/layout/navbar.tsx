@@ -150,6 +150,7 @@ export default function Navbar() {
                         devang
                     </span>
                 </Link>
+
             </motion.nav>
         </motion.header>
     );
