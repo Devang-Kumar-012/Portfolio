@@ -4,11 +4,12 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
-// import LanguageSwitcher from "@/components/widgets/language-switcher";
+import LanguageSwitcher from "@/components/widgets/language-switcher";
 // import ThemeSwitcher from "@/components/widgets/theme-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
 import Lenis from "lenis";
+import { li } from "framer-motion/client";
 
 export default function Navbar() {
     const { dict } = useLanguage();
@@ -151,6 +152,26 @@ export default function Navbar() {
                     </span>
                 </Link>
 
+                <div className="hidden xl:flex items-center gap-8">
+                    <ul className="flex items-center gap-6">
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <Link
+                                    href={link.href}
+                                    onClick={(e) => scrollToSection(e, link.href)}
+                                    className="relative text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-foreground group py-2"
+                                >
+                                    {link.name}
+                                    <span className="absolute bottom-0 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="flex items-center gap-3">
+                        <LanguageSwitcher />
+                    </div>
+                </div>
             </motion.nav>
         </motion.header>
     );
