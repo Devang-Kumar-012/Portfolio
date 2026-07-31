@@ -33,6 +33,7 @@ export default function LanguageSwitcher() {
                     <span className="sr-only">Switch Language</span>
                 </button>
             </DropdownMenuTrigger>
+            <DropdownMenuItem asChild className="rounded-xl cursor-pointer my-05 focus"></DropdownMenuItem>
         </DropdownMenu>
     )
 }
