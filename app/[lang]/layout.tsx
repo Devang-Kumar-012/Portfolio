@@ -58,10 +58,10 @@ export default async function LangLayout({
                         defaultTheme="dark"
                         enableSystem={false}
                     >
-                        {/* <CustomCursor /> */}
+                        <CustomCursor />
                         <PreLoader />
                         <SmoothScroll>
-                            {/* <Navbar /> */}
+                            <Navbar />
                             {children}
                         </SmoothScroll>
                     </ThemeProvider>
