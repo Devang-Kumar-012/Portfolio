@@ -58,10 +58,12 @@ export function HangingProfile() {
                 const x = state.current.currentLength * Math.sin(state.current.angle);
                 const y = state.current.currentLength * Math.cos(state.current.angle);
 
+                // Rope line end point
                 ropeRef.current.setAttribute("x2", (150 + x).toString());
                 ropeRef.current.setAttribute("y2", y.toString());
 
-                boxRef.current.style.transform = `translate(${x}px, ${y - ropeLength}px) rotate(${-state.current.angle}rad)`;
+                // Translate card directly to the rope end position (x, y)
+                boxRef.current.style.transform = `translate(${x}px, ${y}px) rotate(${-state.current.angle}rad)`;
             }
             animateFrameId = requestAnimationFrame(updatePhysics);
         };
@@ -100,6 +102,36 @@ export function HangingProfile() {
         };
     }, []);
 
+    const handlePointerDown = (e: React.PointerEvent) => {
+        state.current.isDragging = true;
+        if (boxRef.current) {
+            boxRef.current.style.cursor = "grabbing";
+        }
+        const updateMousePos = (ev: PointerEvent) => {
+            if (!containerRef.current) return;
+            const rect = containerRef.current.getBoundingClientRect();
+            const originX = rect.width / 2;
+            const originY = 0;
+
+            state.current.dragX = ev.clientX - rect.left - originX;
+            state.current.dragY = ev.clientY - rect.top - originY;
+        };
+
+        const handlePointerUp = () => {
+            state.current.isDragging = false;
+            if (boxRef.current) {
+                boxRef.current.style.cursor = "grab";
+            }
+            window.removeEventListener("pointermove", updateMousePos);
+            window.removeEventListener("pointerup", handlePointerUp);
+        };
+
+        updateMousePos(e.nativeEvent as PointerEvent);
+
+        window.addEventListener("pointermove", updateMousePos);
+        window.addEventListener("pointerup", handlePointerUp);
+    };
+
     return (
         <div ref={containerRef} className="relative w-[300px] h-[350px] flex justify-center -mt-4">
             <svg className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-visible">
@@ -114,16 +146,17 @@ export function HangingProfile() {
                     className="text-foreground/40"
                     strokeLinecap="round"
                 />
-                <circle cx="150" cy="0" r="5" fill="currentColor" className="text-foreground/40"></circle>
-                <circle cx="150" cy="0" r="2" fill="currentColor" className="text-foreground"></circle>
+                <circle cx="150" cy="0" r="5" fill="currentColor" className="text-foreground/40" />
+                <circle cx="150" cy="0" r="2" fill="currentColor" className="text-foreground" />
             </svg>
             <div
                 ref={boxRef}
+                onPointerDown={handlePointerDown}
                 className="absolute top-0 flex flex-col items-center justify-center p-4 w-[140px] rounded-2xl bg-background/40 backdrop-blur-md border border-foreground/10 cursor-grab shadow-2xl hover:bg-background/60 transition-colors duration-300"
                 style={{
                     left: "50%",
                     marginLeft: "-70px",
-                    transformOrigin: "center top",
+                    transformOrigin: "50% 0px", // Top center attachment point
                     touchAction: "none"
                 }}
             >
@@ -138,8 +171,7 @@ export function HangingProfile() {
                         Developer
                     </span>
                 </div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-1 w-2.5 h-2 rounded-full border-2 border-foreground/20 bg-background">
-                </div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-1 w-2.5 h-2 rounded-full border-2 border-foreground/20 bg-background" />
             </div>
         </div>
     );

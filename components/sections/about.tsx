@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { useLanguage } from "@/providers/language-provider";
 import { useState } from "react";
-// import { AboutModal } from "@/components/modals/about-modal";
+import { AboutModal } from "@/components/modals/about-modal";
 import { HangingProfile } from "@/components/widgets/hanging-profile";
 
 export default function About() {
@@ -29,10 +29,39 @@ export default function About() {
                                 </h2>
                             </BlurReveal>
 
-                            {/* Removed hidden xl:block and BlurReveal wrapper so it's always visible and not clipped */}
                             <div className="mt-8 flex justify-center xl:justify-start">
                                 <HangingProfile />
                             </div>
+                        </div>
+                    </div>
+
+                    <div className="xl:w-3/4 flex flex-col gap-24">
+                        <div className="space-y-12">
+                            <BlurReveal>
+                                <h3 className="text-3xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
+                                    {content.about.intro}
+                                </h3>
+                            </BlurReveal>
+
+                            <BlurReveal>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                                    {content.about.description}
+                                </p>
+                            </BlurReveal>
+
+                            <BlurReveal>
+                                <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="group relative inline-flex cursor-pointer items-center gap-2 text-l md:text-2xl font-medium py-2"
+                                >
+                                    <span className="relative z-10 border-b-2 border-foreground/30 pb-1 group-hover:border-foreground transition-all duration-300">
+                                        {dict.readFullVersion}
+                                    </span>
+                                    <ArrowRight className="w-6 h-6" />
+                                </button>
+                            </BlurReveal>
+
+                            <AboutModal open={isOpen} onChange={setIsOpen} />
                         </div>
                     </div>
                 </div>
