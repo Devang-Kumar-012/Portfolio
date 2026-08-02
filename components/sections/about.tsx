@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { ArrowRight } from "lucide-react";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { useLanguage } from "@/providers/language-provider";
 import { useState } from "react";
-// import { AboutModal } from "@/components/modals/about-modal;
-// import { HangingProfile } from "components/widgets/hanging-profile";
+// import { AboutModal } from "@/components/modals/about-modal";
+import { HangingProfile } from "@/components/widgets/hanging-profile";
 
 export default function About() {
     const { content, dict } = useLanguage();
@@ -17,10 +17,26 @@ export default function About() {
                 <div className="flex flex-col xl:flex-row gap-12 xl:gap-32">
                     <div className="xl:w-1/4">
                         <div className="flex flex-col gap-4 sticky top-32">
+                            <BlurReveal>
+                                <span className="title-counter">
+                                    [001]
+                                </span>
+                            </BlurReveal>
+
+                            <BlurReveal>
+                                <h2 className="title-relative z-10">
+                                    {dict.title.about}
+                                </h2>
+                            </BlurReveal>
+
+                            {/* Removed hidden xl:block and BlurReveal wrapper so it's always visible and not clipped */}
+                            <div className="mt-8 flex justify-center xl:justify-start">
+                                <HangingProfile />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
