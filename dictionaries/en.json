@@ -14,6 +14,10 @@
         "roadmap": "Roadmap",
         "contact": "Contact"
     },
+    "about": {
+        "intro": "Building software that connects web development, AI, and robotics.",
+        "description": "I'm Devang Kumar, a B.Tech Artificial Intelligence & Machine Learning student and Full-Stack Developer. I build modern web applications using React, Next.js, Node.js, and Python while exploring AI, machine learning, and robotics with ROS 2. I enjoy turning ideas into practical, scalable solutions through clean code and continuous learning."
+    },
     "scrollDown": "Scroll",
     "contactMe": "Contact Me",
     "exploreProjects": "Explore Projects",

@@ -145,7 +145,7 @@ export default function Hero() {
                 </div>
                 <div className="space-y-6 sm:space-y-8 xl:space-y-10">
                     <p className="sm:text-lg 2xl:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mix-blend-difference">
-                        {content.about.description}
+                        {content?.hero?.tagline}
                     </p>
                     <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
                         <button

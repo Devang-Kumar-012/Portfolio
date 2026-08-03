@@ -19,7 +19,7 @@ export default function About() {
                         <div className="flex flex-col gap-4 sticky top-32">
                             <BlurReveal>
                                 <span className="title-counter">
-                                    [001]
+                                    [230013]
                                 </span>
                             </BlurReveal>
 
@@ -61,7 +61,7 @@ export default function About() {
                                 </button>
                             </BlurReveal>
 
-                            <AboutModal open={isOpen} onChange={setIsOpen} />
+                            <AboutModal open={isOpen} onOpenChange={setIsOpen} />
                         </div>
                     </div>
                 </div>

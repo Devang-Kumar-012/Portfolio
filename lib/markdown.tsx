@@ -37,18 +37,16 @@ export function parseMarkdown<T>(data: T): T {
         if (!/\*{1,2}[^*]+\*{1,2}/.test(data) && !data.includes("\n\n")) return data;
 
         const paragraphs = data.split("\n\n");
-        if (paragraphs.length === 1) return parseInt(data) as unknown as T;
+        if (paragraphs.length === 1) {
+            // ✅ FIX: Render the parsed inline JSX instead of calling parseInt()
+            return ParseInline(data) as unknown as T;
+        }
 
         return (
             <>
                 {paragraphs.map((p: string, i: number) => (
                     <React.Fragment key={i}>
-                        {i > 0 &&
-                            <>
-                                <br />
-                                <br />
-                            </>
-                        }
+                        {i > 0 && <><br /><br /></>}
                         {ParseInline(p)}
                     </React.Fragment>
                 ))}

@@ -24,21 +24,28 @@ interface LanguageProviderProps {
     shared: SharedDataType;
 }
 
-export function LanguageProvider({ children, lang, dict: dictionary, contents, shared }: LanguageProviderProps) {
-    const dict = useMemo(
-        () => parseMarkdown(dictionary),
-        [dictionary]
-    );
+export function LanguageProvider({
+    children,
+    lang,
+    dict: dictionary = {} as DictionaryType,
+    contents = {} as ContentLanguageType,
+    shared = {} as SharedDataType
+}: LanguageProviderProps) {
 
-    const content = useMemo(
-        () => parseMarkdown(
-            deepMerge(
-                shared as unknown as Record<string, unknown>,
-                contents as unknown as Record<string, unknown>
-            )
-        ) as unknown as ContentType,
-        [contents, shared]
-    );
+    // Safely parse markdown dictionary
+    const dict = useMemo(() => {
+        if (!dictionary) return {} as DictionaryType;
+        return parseMarkdown(dictionary) as DictionaryType;
+    }, [dictionary]);
+
+    // Safely merge and parse markdown content
+    const content = useMemo(() => {
+        const merged = deepMerge(
+            (shared || {}) as unknown as Record<string, unknown>,
+            (contents || {}) as unknown as Record<string, unknown>
+        );
+        return parseMarkdown(merged) as unknown as ContentType;
+    }, [contents, shared]);
 
     return (
         <LanguageContext.Provider value={{ language: lang, dict, content }}>
