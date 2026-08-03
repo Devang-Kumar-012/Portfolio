@@ -19,7 +19,7 @@ export default function About() {
                         <div className="flex flex-col gap-4 sticky top-32">
                             <BlurReveal>
                                 <span className="title-counter">
-                                    [230013]
+                                    [001]
                                 </span>
                             </BlurReveal>
 
@@ -52,7 +52,7 @@ export default function About() {
                             <BlurReveal>
                                 <button
                                     onClick={() => setIsOpen(true)}
-                                    className="group relative inline-flex cursor-pointer items-center gap-2 text-l md:text-2xl font-medium py-2"
+                                    className="group relative inline-flex cursor-pointer items-center gap-2 text-lg md:text-2xl font-medium py-2"
                                 >
                                     <span className="relative z-10 border-b-2 border-foreground/30 pb-1 group-hover:border-foreground transition-all duration-300">
                                         {dict.readFullVersion}
