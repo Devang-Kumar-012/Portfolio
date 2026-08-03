@@ -8,7 +8,9 @@ const Separator = () => (
 
 export default function ManifestoFlow({ reverse = false }: { reverse?: boolean }) {
     const { content } = useLanguage();
+
     const mainfestoItems = content?.manifesto || [];
+
     return (
         <div className="relative w-full overflow-hidden border-y border-border/50"></div>
     )
