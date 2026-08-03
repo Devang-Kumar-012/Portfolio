@@ -40,4 +40,4 @@ export default function ManifestoFlow({ reverse = false }: { reverse?: boolean }
             </div>
         </div>
     );
-}
+};
