@@ -10,24 +10,34 @@
             "href": "https://github.com/Devang-Kumar-012"
         },
         {
-            "label": "Instagram",
-            "href": "https://instagram.com/devangkumar012"
-        },
-        {
             "label": "LinkedIn",
             "href": "https://www.linkedin.com/in/devangkumar012/"
+        },
+        {
+            "label": "Instagram",
+            "href": "https://instagram.com/devangkumar012"
         }
     ],
     "stack": {
         "frontend": [
+            {
+                "name": "Next.js",
+                "icon": "/stack/nextjs.svg",
+                "featured": true
+            },
             {
                 "name": "React",
                 "icon": "/stack/react.svg",
                 "featured": true
             },
             {
-                "name": "Next.js",
-                "icon": "/stack/nextjs.svg",
+                "name": "TypeScript",
+                "icon": "/stack/typescript.svg",
+                "featured": true
+            },
+            {
+                "name": "JavaScript",
+                "icon": "/stack/javascript.svg",
                 "featured": true
             },
             {
@@ -36,29 +46,12 @@
                 "featured": true
             },
             {
-                "name": "Framer Motion",
-                "icon": "/stack/framermotion.svg",
-                "featured": true
-            },
-            {
-                "name": "TypeScript",
-                "icon": "/stack/typescript.svg"
-            },
-            {
-                "name": "JavaScript",
-                "icon": "/stack/javascript.svg"
-            },
-            {
                 "name": "HTML5",
                 "icon": "/stack/html5.svg"
             },
             {
                 "name": "CSS3",
                 "icon": "/stack/css3.svg"
-            },
-            {
-                "name": "Bootstrap",
-                "icon": "/stack/bootstrap.svg"
             }
         ],
         "backend": [
@@ -79,7 +72,8 @@
             },
             {
                 "name": "Java",
-                "icon": "/stack/java.svg"
+                "icon": "/stack/java.svg",
+                "featured": true
             },
             {
                 "name": "C++",
@@ -88,14 +82,6 @@
             {
                 "name": "C",
                 "icon": "/stack/c.svg"
-            },
-            {
-                "name": "ROS 2",
-                "icon": "/stack/ros2.svg"
-            },
-            {
-                "name": "Linux",
-                "icon": "/stack/linux.svg"
             }
         ],
         "database": [
@@ -110,30 +96,51 @@
                 "featured": true
             }
         ],
+        "robotics": [
+            {
+                "name": "ROS 2",
+                "icon": "/stack/ros2.svg",
+                "featured": true
+            },
+            {
+                "name": "Gazebo",
+                "icon": "/stack/gazebo.svg",
+                "featured": true
+            },
+            {
+                "name": "RViz2",
+                "icon": "/stack/rviz.svg",
+                "featured": true
+            },
+            {
+                "name": "Linux",
+                "icon": "/stack/linux.svg",
+                "featured": true
+            }
+        ],
         "tools": [
             {
                 "name": "Git",
-                "icon": "/stack/git.svg"
+                "icon": "/stack/git.svg",
+                "featured": true
             },
             {
                 "name": "GitHub",
-                "icon": "/stack/github.svg"
+                "icon": "/stack/github.svg",
+                "featured": true
             },
             {
                 "name": "VS Code",
-                "icon": "/stack/vscode.svg"
+                "icon": "/stack/vscode.svg",
+                "featured": true
             },
             {
                 "name": "Vercel",
                 "icon": "/stack/vercel.svg"
             },
             {
-                "name": "Gazebo",
-                "icon": "/stack/gazebo.svg"
-            },
-            {
-                "name": "RViz",
-                "icon": "/stack/rviz.svg"
+                "name": "VirtualBox",
+                "icon": "/stack/virtualbox.svg"
             }
         ]
     }

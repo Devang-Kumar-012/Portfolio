@@ -5,7 +5,7 @@
     "about": {
         "intro": "I'm someone who enjoys learning, building, and improving every day.",
         "description": "I develop modern web applications, explore AI and robotics, and love turning ideas into practical software. I believe in writing clean code, solving real-world problems, and continuously improving my skills.",
-        "full": "Hi, I'm **Devang Kumar**, a B.Tech student specializing in **Artificial Intelligence & Machine Learning** at Hi-Tech Institute of Engineering & Technology, affiliated with AKTU.\n\nI enjoy learning new technologies and turning ideas into real projects. My interest in software development has led me to explore full-stack web development, artificial intelligence, and robotics, where I enjoy building practical solutions that solve real-world problems.\n\nI primarily work with *React*, *Next.js*, *Node.js*, *Express.js*, *JavaScript*, *TypeScript*, *Python*, *Java*, *MongoDB*, *MySQL*, and *Tailwind CSS*. Alongside web development, I'm also learning and building robotics applications using *ROS 2*, *Gazebo*, *RViz*, *URDF*, *Xacro*, and Linux.\n\nSome of the projects I've worked on include **Street Dog Health Twin (SDHT)**, an AI-powered platform for stray dog healthcare, **MoodMate**, an AI-assisted mental wellness application, and a **Cybersecurity Awareness Platform** designed to spread cybersecurity awareness through interactive learning.\n\nOutside of development, I enjoy participating in hackathons, exploring emerging technologies, and continuously improving my technical skills. My goal is to become a Software Engineer who builds intelligent, scalable, and impactful solutions by combining Full-Stack Development, Artificial Intelligence, and Robotics."
+        "full": "Hi, I'm **Devang Kumar**, a B.Tech student specializing in **Artificial Intelligence & Machine Learning** at Hi-Tech Institute of Engineering & Technology, affiliated with AKTU.\n\nI enjoy learning new technologies and turning ideas into real projects. My interest in software development has led me to explore full-stack web development, artificial intelligence, and robotics, where I enjoy building practical solutions that solve real-world problems.\n\nI primarily work with *React*, *Next.js*, *Node.js*, *Express.js*, *JavaScript*, *Python*, *Java*, *MongoDB*, *MySQL*, and *Tailwind CSS*. Alongside web development, I'm also learning and building robotics applications using *ROS 2*, *Gazebo*, *RViz*, *URDF*, *Xacro*, and Linux.\n\nSome of the projects I've worked on include **Street Dog Health Twin (SDHT)**, an AI-powered platform for stray dog healthcare, **MoodMate**, an AI-assisted mental wellness application, and a **Cybersecurity Awareness Platform** designed to spread cybersecurity awareness through interactive learning.\n\nOutside of development, I enjoy participating in hackathons, exploring emerging technologies, and continuously improving my technical skills. My goal is to become a Software Engineer who builds intelligent, scalable, and impactful solutions by combining Full-Stack Development, Artificial Intelligence, and Robotics."
     },
     "manifesto": [
         "CURIOUS",
@@ -58,9 +58,7 @@
             "repo": "https://github.com/Devang-Kumar-012",
             "stack": [
                 "Next.js",
-                "TypeScript",
-                "TailwindCSS",
-                "Framer Motion"
+                "TailwindCSS"
             ]
         }
     ],
