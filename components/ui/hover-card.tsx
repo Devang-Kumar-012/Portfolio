@@ -16,3 +16,22 @@ function HoverCardTrigger({
         <HoverCardPrimitive.Trigger data-slot="hover-card-trigger" {...props} />
     )
 }
+
+function HoverCardContent({
+    className,
+    align = "center",
+    sideOffset = 4,
+    ...props
+}: React.ComponentProps<typeof HoverCardPrimitive.Content>) {
+    return (
+        <HoverCardPrimitive.Portal data-slot="hover-card-portal">
+            <HoverCardPrimitive.Content
+                data-slot="hover-card-content"
+                align={align}
+                sideOffset={sideOffset}
+                className={cn(
+                    "bg-popover text-popover-foreground data-[state=open]: animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]"
+                )}></HoverCardPrimitive.Content>
+        </HoverCardPrimitive.Portal>
+    )
+}
