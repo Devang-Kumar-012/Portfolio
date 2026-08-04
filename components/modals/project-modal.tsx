@@ -8,7 +8,7 @@ import {
 
 import { useLenisModal } from "@/hooks/use-lenis-modal";
 import { useLanguage } from "@/providers/language-provider";
-import { Github, ExternalLink } from "lucide-react";
+import { GitPullRequest as Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import type { ProjectItem } from "@/types/project";
 import { ShineButton } from "@/components/ui/shine-button";
