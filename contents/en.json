@@ -8,12 +8,12 @@
         "full": "Hi, I'm **Devang Kumar**, a B.Tech student specializing in **Artificial Intelligence & Machine Learning** at Hi-Tech Institute of Engineering & Technology, affiliated with AKTU.\n\nI enjoy learning new technologies and turning ideas into real projects. My interest in software development has led me to explore full-stack web development, artificial intelligence, and robotics, where I enjoy building practical solutions that solve real-world problems.\n\nI primarily work with *React*, *Next.js*, *Node.js*, *Express.js*, *JavaScript*, *TypeScript*, *Python*, *Java*, *MongoDB*, *MySQL*, and *Tailwind CSS*. Alongside web development, I'm also learning and building robotics applications using *ROS 2*, *Gazebo*, *RViz*, *URDF*, *Xacro*, and Linux.\n\nSome of the projects I've worked on include **Street Dog Health Twin (SDHT)**, an AI-powered platform for stray dog healthcare, **MoodMate**, an AI-assisted mental wellness application, and a **Cybersecurity Awareness Platform** designed to spread cybersecurity awareness through interactive learning.\n\nOutside of development, I enjoy participating in hackathons, exploring emerging technologies, and continuously improving my technical skills. My goal is to become a Software Engineer who builds intelligent, scalable, and impactful solutions by combining Full-Stack Development, Artificial Intelligence, and Robotics."
     },
     "manifesto": [
-        "CONTINUOUS LEARNING",
-        "PROBLEM SOLVING",
+        "CURIOUS",
+        "SOLVE REAL PROBLEMS",
         "BUILD WITH PURPOSE",
-        "AI FOR IMPACT",
-        "CLEAN DEVELOPMENT",
-        "NEVER STOP IMPROVING"
+        "AI FOR GOOD",
+        "CLEAN AND SCALABLE",
+        "ALWAYS EVOLVING WITH TIME"
     ],
     "projects": [
         {

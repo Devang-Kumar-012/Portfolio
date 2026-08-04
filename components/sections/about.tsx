@@ -19,7 +19,7 @@ export default function About() {
                         <div className="flex flex-col gap-4 sticky top-32">
                             <BlurReveal>
                                 <span className="title-counter">
-                                    [230013]
+                                    [Section-One]
                                 </span>
                             </BlurReveal>
 
