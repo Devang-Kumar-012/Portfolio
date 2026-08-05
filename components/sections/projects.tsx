@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
-import React, { use, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/providers/language-provider";
 import { useMediaQuery, BREAKPOINTS } from "@/hooks/use-media-query";
@@ -147,6 +147,14 @@ export default function Projects() {
                                         {dict.projectsIntro}
                                     </p>
                                 </BlurReveal>
+                                <BlurReveal>
+                                    <div className="mt-12 flex items-center gap-4">
+                                        <div className="h-px w-24 bg-border"></div>
+                                        <span className="text-sm font-mono text-foreground/40 uppercase">
+                                            {dict.projectsScrollText}
+                                        </span>
+                                    </div>
+                                </BlurReveal>
                             </div>
                         </div>
 
@@ -158,9 +166,14 @@ export default function Projects() {
                                     onClick={() => handleOpenProject(project)}
                                 />
                             ))}
+
+                            <div className="w-[40vw] h-[70vh] shrink-0 flex flex-col justify-center items-center">
+                                <h3 className="text-[10vw] font-black tracking-tighter text-border uppercase">
+                                    {dict.projectsEndText}
+                                </h3>
+                            </div>
                         </div>
                     </motion.div>
-
                 )}
             </div>
 
@@ -173,26 +186,22 @@ export default function Projects() {
     );
 }
 
-function ProjectCard({ project, onClick }: { project: ProjectItem; onClick: () => void }) {
+const ProjectCard = React.memo(function ProjuctCard({ project, onClick }: { project: ProjectItem; onClick?: () => void }) {
+
     return (
-        <div
-            onClick={onClick}
-            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border/50 bg-secondary/30 p-4 transition-all duration-500 hover:border-primary/50"
-        >
-            {project.image && (
-                <div className="relative h-64 w-80 shrink-0 overflow-hidden rounded-xl">
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+        <BlurReveal>
+            <div className="group relative w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer">
+                <div className="relative w-full h-full overflow-hidden bg-muted border border/50 transition-all duration-700 ease-out group-hover:border-foreground/20">
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src={project.image}
+                            alt=""
+                            sizes="(max-width: 1280px) 100vw, 45vw"
+                            loading="lazy"
+                            className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
+                    </div>
                 </div>
-            )}
-            <div className="mt-4 flex flex-col gap-2">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
             </div>
-        </div>
-    );
-}
+        </BlurReveal>
+    )
+})
