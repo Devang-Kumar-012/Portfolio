@@ -1,10 +1,11 @@
 import Navbar from "@/components/layout/navbar";
 import ScrollProgress from "@/components/layout/Scroll-Progress";
 import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/about";
 import Stack from "@/components/sections/stack";
 import Projects from "@/components/sections/projects";
-import About from "@/components/sections/about";
 import ManifestoFlow from "@/components/effects/mainfesto-flow";
+import Roadmap from "@/components/sections/roadmap";
 
 export default function Home() {
     return (
@@ -26,6 +27,10 @@ export default function Home() {
 
                     <section id="projects">
                         <Projects />
+                    </section>
+                    <ManifestoFlow />
+                    <section id="roadmap">
+                        <Roadmap />
                     </section>
                 </div>
             </main>
