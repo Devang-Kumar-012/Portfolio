@@ -6,6 +6,7 @@ import Stack from "@/components/sections/stack";
 import Projects from "@/components/sections/projects";
 import ManifestoFlow from "@/components/effects/mainfesto-flow";
 import Roadmap from "@/components/sections/roadmap";
+import Contact from "@/components/sections/contact";
 
 export default function Home() {
     return (
@@ -31,6 +32,10 @@ export default function Home() {
                     <ManifestoFlow />
                     <section id="roadmap">
                         <Roadmap />
+                    </section>
+                    <ManifestoFlow reverse />
+                    <section id="contact">
+                        <Contact />
                     </section>
                 </div>
             </main>
