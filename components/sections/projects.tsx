@@ -18,7 +18,8 @@ export default function Projects() {
     const horizontalContainerRef = useRef<HTMLDivElement>(null);
 
     const [measurements, setMeasurements] = useState({
-        scrollRange: 0, dynamicHeight: "auto",
+        scrollRange: 0,
+        dynamicHeight: "auto",
     });
     const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -186,22 +187,42 @@ export default function Projects() {
     );
 }
 
-const ProjectCard = React.memo(function ProjuctCard({ project, onClick }: { project: ProjectItem; onClick?: () => void }) {
-
+const ProjectCard = React.memo(function ProjectCard({
+    project,
+    onClick,
+}: {
+    project: ProjectItem;
+    onClick?: () => void;
+}) {
     return (
         <BlurReveal>
-            <div className="group relative w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer">
-                <div className="relative w-full h-full overflow-hidden bg-muted border border/50 transition-all duration-700 ease-out group-hover:border-foreground/20">
-                    <div className="absolute inset-0 z-0">
-                        <Image
-                            src={project.image}
-                            alt=""
-                            sizes="(max-width: 1280px) 100vw, 45vw"
-                            loading="lazy"
-                            className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
+            <div
+                onClick={onClick}
+                className="group relative w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 cursor-pointer overflow-hidden rounded-xl border border-border/50 bg-muted transition-all duration-500 ease-out hover:border-foreground/30 hover:shadow-2xl"
+            >
+                <div className="relative w-full h-full">
+                    <Image
+                        src={project.image}
+                        alt={project.title || "Project preview"}
+                        fill
+                        unoptimized
+                        sizes="(max-width: 1280px) 100vw, 45vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-40" />
+
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-1 z-10">
+                        <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                            {project.title}
+                        </h3>
+                        {project.category && (
+                            <p className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
+                                {project.category}
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>
         </BlurReveal>
-    )
-})
+    );
+});

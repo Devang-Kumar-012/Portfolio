@@ -22,7 +22,7 @@
             "category": "AI Healthcare Platform",
             "year": "2026",
             "description": "Street Dog Health Twin (SDHT) is an AI-powered platform designed to improve the healthcare and welfare of stray dogs through digital health monitoring. The system creates digital profiles for stray dogs, enables volunteers and NGOs to report health conditions, and is designed to integrate RFID collars for intelligent tracking. Developed as an ideathon-winning project, SDHT combines artificial intelligence, full-stack development, and social impact to support animal welfare initiatives.",
-            "image": "/projects/sdht.jpg",
+            "image": "/projects/sdht.png",
             "repo": "https://github.com/Devang-Kumar-012",
             "stack": [
                 "React",
