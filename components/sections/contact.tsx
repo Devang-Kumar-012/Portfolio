@@ -32,7 +32,8 @@ export default function Contact() {
                         </BlurReveal>
                     </div>
                 </div>
-                <div className="flex flex-col w-full max-w-5xl mx-auto mb-12 sm:mb-24 xl:mb-40 border-t border-border/50">
+
+                <div className="flex flex-col w-full max-w-5xl mx-auto mb-12 sm:mb-24 xl:mb-32 border-t border-border/50">
                     <BlurReveal>
                         <a
                             href={`mailto:${content.contact.email}`}
@@ -51,9 +52,10 @@ export default function Contact() {
                             </div>
                         </a>
                     </BlurReveal>
+
                     <BlurReveal>
                         <a
-                            href={`tel${sanitizePhone(content.contact.phone)}`}
+                            href={`tel:${sanitizePhone(content.contact.phone)}`}
                             className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
                         >
                             <span className="text-sm font-mono tracking-widest text-muted-foreground uppercase mb-4 md:mb-0 transition-colors duration-500 group-hover:text-foreground">
@@ -70,7 +72,34 @@ export default function Contact() {
                         </a>
                     </BlurReveal>
                 </div>
+
+                <div className="w-full flex flex-col md:flex-row items-center justify-between pb-12 pt-8 border-t border-border/50 gap-8">
+                    <div className="text-xs font-mono tracking-widest text-muted-foreground uppercase flex items-center gap-2">
+                        <span>&copy; {new Date().getFullYear()}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
+                        <span>DEVANG. {dict.allRightsReserved}</span>
+                    </div>
+
+                    <div className="flex flex-wrap items-center justify-center gap-3">
+                        {content.social?.map((link: { label: string; href: string }) => (
+                            <BlurReveal key={link.label}>
+                                <ShineButton
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative h-11 px-6 rounded-full border border-border/60 bg-secondary/10 hover:bg-secondary/30 hover:border-foreground/40 transition-all duration-500 hover:scale-105 active:scale-95"
+                                    shineClassName="w-8 bg-foreground/10"
+                                >
+                                    <span className="relative z-10 flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                                        {link.label}
+                                        <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                    </span>
+                                </ShineButton>
+                            </BlurReveal>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
-    )
+    );
 }

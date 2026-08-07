@@ -89,23 +89,23 @@
         {
             "id": "03",
             "year": "2025",
-            "description": "Worked as a Robotics Backend Engineer Intern at NextUp Robotics while also participating in hackathons and developing AI-powered full-stack applications. During this period, I gained practical experience with robotics software development, Linux, ROS 2, and backend system integration.",
-            "stack": [
-                "ROS 2",
-                "Gazebo",
-                "RViz",
-                "Python"
-            ]
-        },
-        {
-            "id": "04",
-            "year": "2026",
             "description": "Built impactful AI projects including Street Dog Health Twin (SDHT) and MoodMate, won college ideathons, developed modern full-stack applications with Next.js, and continued improving software architecture, backend engineering, and AI integration skills.",
             "stack": [
                 "Next.js",
                 "Node.js",
                 "MongoDB",
                 "AI"
+            ]
+        },
+        {
+            "id": "04",
+            "year": "2026",
+            "description": "Worked as a Robotics Backend Engineer Intern at NextUp Robotics while also participating in hackathons and developing AI-powered full-stack applications. During this period, I gained practical experience with robotics software development, Linux, ROS 2, and backend system integration.",
+            "stack": [
+                "ROS 2",
+                "Gazebo",
+                "RViz",
+                "Python"
             ]
         },
         {

@@ -14,28 +14,38 @@ export default function Roadmap() {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start center", "end center"]
+        offset: ["start start", "end end"]
     });
+
     const scaleY = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
         restDelta: 0.001
     });
-    const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
+    // Slow, subtle parallax drift while stuck
+    const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
 
     return (
-        <section className="relative container-void overflow-hidden py-32 xl:py-48 border-t border-border/50">
-            <div className="absolute top-1/4 left-0 w-full max-w-lg h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-x-1/2"></div>
-            <div className="absolute top-1/4 left-0 w-full max-w-lg h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-x-1/2"></div>
+        <section
+            ref={containerRef}
+            className="relative container-void py-32 xl:py-48 border-t border-border/50 bg-background"
+        >
+            {/* STICKY BACKGROUND TEXT: Stays centered in viewport through entire roadmap scroll */}
+            <div className="sticky top-0 h-screen w-full pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+                <motion.div
+                    style={{ y: yBackground }}
+                    className="opacity-[0.12] select-none"
+                >
+                    <div className="text-[20vw] font-black tracking-tighter uppercase whitespace-nowrap">
+                        {dict.title.roadmap}
+                    </div>
+                </motion.div>
+            </div>
 
-            <motion.div
-                style={{ y: yBackground }}
-                className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none flex items-center justify-center opacity-[0.2] z-0 overflow-hidden"
-            >
-                <div className="text-[20vw] font-black tracking-tighter uppercase whitespace-nowrap">
-                    {dict.title.roadmap}
-                </div>
-            </motion.div>
+            {/* Ambient Lighting */}
+            <div className="absolute top-1/4 left-0 w-full max-w-lg h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-x-1/2"></div>
+            <div className="absolute bottom-1/4 right-0 w-full max-w-lg h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none translate-x-1/2"></div>
 
             <div className="container mx-auto px-container max-w-6xl relative z-10">
                 <div className="flex flex-col md:items-center mb-24 md:mb-40 gap-4 text-center">
@@ -57,6 +67,7 @@ export default function Roadmap() {
                         </p>
                     </BlurReveal>
                 </div>
+
                 <div className="relative">
                     <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border/40 -translate-x-1/2"></div>
                     <motion.div
@@ -75,7 +86,7 @@ export default function Roadmap() {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     );
 }
 
@@ -91,7 +102,7 @@ const TimelineNode = ({ item, isEven }: { item: RoadmapItem; isEven: boolean }) 
             <div className={cn("w-full md:w-[calc(50%-3rem)] pl-16 md:pl-0 relative group")}>
                 <BlurReveal>
                     <div className={cn(
-                        "relative p-8 md:p-10 border border-border/50 bg-secondary/5 backdrop-blur-md overflow-hidden transition-all duration-700 ease-out",
+                        "relative p-8 md:p-10 border border-border/50 bg-secondary/5 backdrop-blur-md transition-all duration-700 ease-out",
                         "hover:bg-secondary/20 hover:border-border hover:shadow-2xl",
                         isEven ? "md:text-right" : "md:text-left"
                     )}>
@@ -126,8 +137,8 @@ const TimelineNode = ({ item, isEven }: { item: RoadmapItem; isEven: boolean }) 
                         </div>
 
                         <div className={cn(
-                            "absolute top-1/2 -translate-y-1/2 text-[10rem] font-black italic text-foreground/3 select-none pointer-events-none transition-all duration-700",
-                            isEven ? "-left-12" : "-right-12 text-right"
+                            "absolute top-1/2 -translate-y-1/2 text-[8rem] lg:text-[10rem] font-black italic text-foreground/5 select-none pointer-events-none transition-all duration-700 z-0",
+                            isEven ? "left-2 md:left-4" : "right-2 md:right-4 text-right"
                         )}>
                             {item.year.slice(2)}
                         </div>
