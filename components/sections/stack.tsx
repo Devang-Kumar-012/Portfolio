@@ -37,7 +37,10 @@ export default function Stack() {
     ];
 
     return (
-        <section className="w-full bg-background text-foreground overflow-hidden relative py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-36">
+        < section
+            id="stack"
+
+            className="w-full bg-background text-foreground overflow-hidden relative py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-36" >
             <div className="h-full flex flex-col px-container container mx-auto">
                 <div className="flex flex-col gap-4 mb-16">
                     <BlurReveal>
@@ -117,6 +120,6 @@ export default function Stack() {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
