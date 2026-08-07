@@ -1,11 +1,13 @@
 import 'server-only';
 import type { Locale } from "./i18n";
 import type enDict from "@/dictionaries/en.json";
+import type hiDict from "@/dictionaries/hi.json";
 import type enContent from "@/contents/en.json";
+import type hiContent from "@/contents/hi.json";
 import type sharedContent from "@/contents/shared.json";
 
-export type DictionaryType = typeof enDict;
-export type ContentLanguageType = typeof enContent;
+export type DictionaryType = typeof enDict | typeof hiDict;
+export type ContentLanguageType = typeof enContent | typeof hiContent;
 export type SharedDataType = typeof sharedContent;
 
 type loader<T> = () => Promise<T>;

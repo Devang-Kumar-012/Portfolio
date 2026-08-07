@@ -14,6 +14,32 @@
         "roadmap": "रोडमैप",
         "contact": "संपर्क"
     },
+    "about": {
+        "intro": "वेब डेवलपमेंट, AI और रोबोटिक्स को जोड़ने वाला सॉफ्टवेयर बनाना।",
+        "description": "मैं देवांग कुमार हूँ, एक B.Tech Artificial Intelligence & Machine Learning छात्र और Full-Stack Developer। मैं React, Next.js, Node.js और Python का उपयोग करके आधुनिक वेब एप्लिकेशन बनाता हूँ, जबकि ROS 2 के साथ AI, मशीन लर्निंग और रोबोटिक्स का अन्वेषण भी करता हूँ। मुझे साफ़ कोड और निरंतर सीखने के माध्यम से व्यावहारिक, स्केलेबल समाधान बनाना पसंद है।"
+    },
+    "contact": {
+        "email": "devangkumar012@gmail.com",
+        "phone": "+91 9999999999"
+    },
+    "social": [
+        {
+            "label": "GITHUB",
+            "href": "https://github.com"
+        },
+        {
+            "label": "DISCORD",
+            "href": "https://discord.com"
+        },
+        {
+            "label": "INSTAGRAM",
+            "href": "https://instagram.com"
+        },
+        {
+            "label": "LINKEDIN",
+            "href": "https://linkedin.com"
+        }
+    ],
     "scrollDown": "नीचे स्क्रॉल करें",
     "contactMe": "संपर्क करें",
     "exploreProjects": "मेरे प्रोजेक्ट्स",
@@ -22,6 +48,7 @@
     "backendStack": "बैकएंड",
     "databaseStack": "डेटाबेस एवं ORMs",
     "toolsStack": "टूल्स एवं इंफ्रास्ट्रक्चर",
+    "roboticsStack": "रोबोटिक्स",
     "projectsIntro": "**विचारों**, *प्रयोगों* और *डिजिटल रचनाओं* का एक संग्रह, जो **कल्पना** से आकार लिया है।",
     "projectsScrollText": "देखने के लिए स्क्रॉल करें",
     "projectsEndText": "समाप्त",
@@ -38,7 +65,6 @@
     "sourceCode": "सोर्स कोड",
     "notFound": {
         "title": "पृष्ठ नहीं मिला",
-        "description": "जिस पृष्ठ की आप तलाश कर रहे हैं वह हटाया जा चुका है, उसका नाम बदल दिया गया है या वह अस्थायी रूप से उपलब्ध नहीं है।",
         "goHome": "होम पेज पर जाएँ"
     }
 }
